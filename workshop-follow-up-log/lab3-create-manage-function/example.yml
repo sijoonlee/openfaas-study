@@ -1,0 +1,15 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:31112
+functions:
+  first:
+    lang: python3
+    handler: ./first
+    image: sijoonlee/first:latest
+
+  second:
+    lang: python3
+    handler: ./second
+    image: sijoonlee/second:latest
+

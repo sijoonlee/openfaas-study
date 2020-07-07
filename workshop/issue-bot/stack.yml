@@ -1,0 +1,18 @@
+provider:
+  name: openfaas
+  gateway: http://localhost:8080
+
+functions:
+  issue-bot:
+    lang: python
+    handler: ./bot-handler
+    image: alexellis2/issue-bot
+    environment:
+      write_debug: true
+      repo: alexellis2/bot-tester
+      positive_threshold: 0.25
+      gateway_hostname: "gateway"
+    environment_file:
+      - env.yml
+    secrets:
+      - alexellis_github_auth_token

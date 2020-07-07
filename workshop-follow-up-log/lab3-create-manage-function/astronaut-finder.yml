@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:31112
+functions:
+  astronaut-finder:
+    lang: python3
+    handler: ./astronaut-finder
+    image: sijoonlee/astronaut-finder:latest
+    environment:
+      write_debug: true
+
