@@ -1,0 +1,15 @@
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  issue-bot:
+    lang: python3
+    handler: ./issue-bot
+    image: sijoonlee/issue-bot
+    environment:
+      write_debug: true
+      gateway_hostname: "gateway.openfaas"
+      positive_threshold: 0.25
+    environment_file:
+    - env.yml

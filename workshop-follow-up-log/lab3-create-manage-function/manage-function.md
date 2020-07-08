@@ -1,4 +1,4 @@
-## Managin multiple functions
+## Managing multiple functions
 - create two function using 'append' in one yml
     ```
     faas-cli new --lang python3 first

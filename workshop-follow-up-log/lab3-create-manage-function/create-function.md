@@ -101,7 +101,7 @@
         handler: ./astronaut-finder
         image: sijoonlee/astronaut-finder:latest
         environment:
-        write_debug: true
+            write_debug: true
     ```
 - log: kubectl logs deployment/astronaut-finder -n openfaas-fn
     ```
